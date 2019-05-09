@@ -4,12 +4,14 @@ This code is used to build a model based on ResNet-18 (no. of layers of ResNet c
 
 **Usage:**
 1. In objloc/dataset/images directory, input images are stored.
-2. In objloc/dataset directory, predicted output(images with bounding boxes) are stored.
+2. In objloc/dataset/prediction directory, predicted output(images with bounding boxes) are stored.
 3. Coordinate of bounding boxes are stored in objloc/results.csv.
-To Run:
+4. objloc/training_set.csv has the training set images with bounding box coordinates. Bounding box coordinates are: x1 is min x coordinate , y1 is min y coordinate, x2 is max x coordinate and y2 is max y coordinate.  
+To Run-   
 In objloc directory:
 1. For training: run getdata.py to generate id_to_box & id_to_size. Then run objloc/train.py
-2. For Testing: To test on trained model: python test1.py
+2. Pre-trained weights can be downloaded from: 
+3. For Testing: To test on trained model: python test1.py  
 
 **Dependencies:**
 
@@ -27,7 +29,7 @@ Loss: smooth l1 loss
 Metric: IoU of groound truth and prediction, threshold=0.75
 
 **Data Augmentation:**
-1. Resize all images to 224*224*3.
+1. Resize all images to (224, 224, 3). Here, orginal image is (480, 640,3).
 2. Normalize and standardize all pixel channel.
 3. The training images were Horizontally fliped, resulting an image set twice as larger as the original one.
 
