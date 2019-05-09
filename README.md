@@ -1,6 +1,6 @@
 # Flipkart_Grid
 
-This code is used to build a model based on ResNet-18 (no. of layers of ResNet can be changed based on system computational capacity) for *Object Localization in images*. Given an input image the code gives a bounding box around the object in image and coordinates of the bounding box. 
+This code is used to build a model based on ResNet-18 (no. of layers of ResNet can be changed based on system computational capacity) for **Object Localization in images**. Given an input image the code gives a bounding box around the object in image and coordinates of the bounding box. 
 
 **Usage:**
 1. In objloc/dataset/images directory, input images are stored.
